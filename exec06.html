@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <style>
+        body{
+            background-color: rgba(0, 0, 255, 0.466);
+            ;
+        }
+        header{
+            text-align: center;
+            font-size: 1.7em;
+            color: white;
+        }
+        section{
+            background-color: white;
+            width: 700px;
+            height: 400px;
+            margin: auto;
+            text-align: center;
+            font-size: 1.2em;
+            padding-top: 5px;
+        }
+        section>div{
+            width: 400px;
+            height: 200px;
+            margin: 60px auto;
+            
+        }
+        footer{
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1.1em;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
+    <section>
+        <p id="texto"></p>
+        <div id="imagem">
+            a
+        </div>
+    </section>
+        <footer>
+            @cursoemvideo
+        </footer>
+    
+        <script>
+            var agora = new Date()
+            var horas = agora.getHours() 
+            // var horas = Number (23)
+            var texto = document.getElementById('texto')
+            var imagem = document.getElementById('imagem')
+            if (horas >=5 && horas <12) {
+                texto.innerText = ` Bom dia. Agora são ${horas} horas.`
+                imagem.style.backgroundColor='blue'
+
+            } else if (horas >=12 && horas <18) {
+                texto.innerText = ` Boa tarde. Agora são ${horas} horas.`
+                imagem.style.backgroundColor = 'yellow'
+            }
+             else if (horas >=18 && horas <=23) {
+                texto.innerText = ` Boa Noite. Agora são ${horas} horas.`
+                imagem.style.backgroundColor = 'red'
+            }
+        </script>
+</body>
+</html>
